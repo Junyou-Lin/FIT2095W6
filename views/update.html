@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Update</h1>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/add">add parcel</a></li>
+        <li><a href="/list">list parcel</a></li>
+        <li><a href="/update">update parcel</a></li>
+        <li><a href="/delete">delete parcel</a></li>
+        <li>
+          <a href="/deleteBySenderAndWeight"
+            >delete parcel by sender and weight</a
+          >
+        </li>
+      </ul>
+    </header>
+    <form action="/update" method="post">
+      Parcel ID
+      <input type="text" name="_id" />
+      sender
+      <input type="text" name="sender" />
+      address
+      <input type="text" name="address" />
+      weight
+      <input type="number" name="weight" />
+      fragile
+      <select name="fragile">
+        <option value="yes">yes</option>
+        <option value="no">no</option>
+      </select>
+      <div style="display: flex; gap: 20px; margin: auto; padding-top: 20px">
+        <a href="/" class="button">back</a>
+        <button type="submit" class="button">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>

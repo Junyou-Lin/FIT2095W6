@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Delete</h1>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/add">add parcel</a></li>
+        <li><a href="/list">list parcel</a></li>
+        <li><a href="/update">update parcel</a></li>
+        <li><a href="/delete">delete parcel</a></li>
+        <li><a href="/deleteBySenderAndWeight">delete parcel by sender and weight</a></li>
+      </ul>
+    </header>
+        <form action="/deleteBySenderAndWeight" method="POST">
+        Sender <input type="text"  name="sender" /> </br>
+        Weight <input type="text"  name="weight" /> </br>
+        <input class="button" type="submit" value="Submit" /> </br>
+    </form>
+  </body>
+</html>

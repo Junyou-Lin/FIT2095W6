@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>List</h1>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/add">add parcel</a></li>
+        <li><a href="/list">list parcel</a></li>
+        <li><a href="/update">update parcel</a></li>
+        <li><a href="/delete">delete parcel</a></li>
+        <li>
+          <a href="/deleteBySenderAndWeight"
+            >delete parcel by sender and weight</a
+          >
+        </li>
+      </ul>
+    </header>
+    <h3>post list</h3>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>sender</th>
+        <th>address</th>
+        <th>weight</th>
+        <th>fragile</th>
+      </tr>
+      <% for(let i =0; i< db.length; i++){ const {_id, sender, address,
+      weight,fragile} = db[i]; %>
+      <tr>
+        <td><%= _id %></td>
+        <td><%= sender %></td>
+        <td><%= address %></td>
+        <td><%= weight %></td>
+        <td><%= fragile %></td>
+      </tr>
+      <% }%>
+    </table>
+    <a href="/" class="button">home</a>
+  </body>
+</html>

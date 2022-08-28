@@ -1,25 +1,25 @@
 <html>
   <head>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
   </head>
   <body>
     <header>
-      <h1>List</h1>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/add">add parcel</a></li>
-        <li><a href="/list">list parcel</a></li>
-        <li><a href="/update">update parcel</a></li>
-        <li><a href="/delete">delete parcel</a></li>
-        <li>
-          <a href="/deleteBySenderAndWeight"
-            >delete parcel by sender and weight</a
-          >
-        </li>
-      </ul>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Post Office</a>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="/list">list parcel</a>
+            <a class="nav-item nav-link" href="/add">Add parcel</a>
+            <a class="nav-item nav-link" href="/update">update parcel</a>
+            <a class="nav-item nav-link" href="/delete">delete parcel</a>
+          </div>
+        </div>
+      </nav>
     </header>
-    <h3>post list</h3>
-    <table>
+    <br />
+    <table class="table table-dark w-75">
       <tr>
         <th>ID</th>
         <th>sender</th>
@@ -27,8 +27,8 @@
         <th>weight</th>
         <th>fragile</th>
       </tr>
-      <% for(let i =0; i< db.length; i++){ const {_id, sender, address,
-      weight,fragile} = db[i]; %>
+      <% for(let i =0; i< parcels.length; i++){ const {_id, sender, address,
+      weight,fragile} = parcels[i]; %>
       <tr>
         <td><%= _id %></td>
         <td><%= sender %></td>
@@ -38,6 +38,6 @@
       </tr>
       <% }%>
     </table>
-    <a href="/" class="button">home</a>
+    <a href="/" class="btn btn-primary">home</a>
   </body>
 </html>

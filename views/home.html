@@ -1,17 +1,22 @@
 <html>
   <head>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
     <header>
-      <h1>Home</h1>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/add">add parcel</a></li>
-        <li><a href="/list">list parcel</a></li>
-        <li><a href="/update">update parcel</a></li>
-        <li><a href="/delete">delete parcel</a></li>
-        <li><a href="/deleteBySenderAndWeight">delete parcel by sender and weight</a></li>
-      </ul>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Post Office</a>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="/list">list parcel</a>
+            <a class="nav-item nav-link" href="/add">Add parcel</a>
+            <a class="nav-item nav-link" href="/update">update parcel</a>
+            <a class="nav-item nav-link" href="/delete">delete parcel</a>
+          </div>
+        </div>
+      </nav>
     </header>
+    <h1>You are in homepage</h1>
   </body>
 </html>

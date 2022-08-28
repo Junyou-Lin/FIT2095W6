@@ -1,22 +1,26 @@
 <html>
   <head>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
   </head>
   <body>
-    <header>
-      <h1>Delete</h1>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/add">add parcel</a></li>
-        <li><a href="/list">list parcel</a></li>
-        <li><a href="/update">update parcel</a></li>
-        <li><a href="/delete">delete parcel</a></li>
-        <li><a href="/deleteBySenderAndWeight">delete parcel by sender and weight</a></li>
-      </ul>
-    </header>
-        <form action="/delete" method="POST">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">Post Office</a>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="/list">list parcel</a>
+          <a class="nav-item nav-link" href="/add">Add parcel</a>
+          <a class="nav-item nav-link" href="/update">update parcel</a>
+          <a class="nav-item nav-link" href="/delete">delete parcel</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+    <form action="/delete" method="post" class="w-25 bg-dark mx-auto mt-3 p-3 text-white">
         Parcel ID <input type="text"  name="_id" /> </br>
-        <input class="button" type="submit" value="Submit" /> </br>
+      <button type="submit" class="btn btn-primary">Submit</button>
     </form>
   </body>
 </html>

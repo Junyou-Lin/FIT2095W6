@@ -7,7 +7,6 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="/">Post Office</a>
-        </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <a class="nav-item nav-link" href="/list">list parcel</a>
@@ -21,7 +20,18 @@
       </nav>
     </header>
     <br />
-    <table class="table table-dark w-75">
+    <form action="/listbyweight" method="post" class="w-25 bg-dark mx-auto mt-3 p-3 text-white">
+        <div class="text-center">
+        Minimum weight <input type="text"  name="minweight" /> </br>
+        </div>
+        <div class="text-center">
+        Maximum weight <input type="text"  name="maxweight" /> </br>
+        </div>
+    <div class="text-center">
+    <button type="submit" class="btn btn-primary mt-2">Submit</button>
+    </div>
+    </form>
+    <table class="table table-dark w-75 mx-auto">
       <tr>
         <th>ID</th>
         <th>sender</th>

@@ -14,6 +14,29 @@ router.get('/list', async (req, res) => {
   res.render('list', { parcels })
 })
 
+router.get('/listbysender', async (req, res) => {
+  const parcels = await Parcel.find()
+  res.render('listBySender', { parcels })
+})
+
+router.post('/listbysender', async (req, res) => {
+  const parcels = await Parcel.find({ sender: req.body.sender })
+  res.render('listBySender', { parcels })
+})
+
+router.get('/listbyweight', async (req, res) => {
+  const parcels = await Parcel.find()
+  res.render('listByWeight', { parcels })
+})
+
+router.post('/listbyweight', async (req, res) => {
+  const { minweight, maxweight } = req.body
+  const parcels = await Parcel.find({
+    weight: { $gte: minweight, $lte: maxweight },
+  })
+  res.render('listByWeight', { parcels })
+})
+
 router.post('/add', async (req, res) => {
   const { sender, address, weight, fragile } = req.body
   const parcel = new Parcel({ sender, address, weight, fragile })

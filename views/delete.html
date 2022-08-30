@@ -11,6 +11,8 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-item nav-link" href="/list">list parcel</a>
+            <a class="nav-item nav-link" href="/listbysender">list parcel by a sender</a>
+            <a class="nav-item nav-link" href="/listbyweight">list parcel by weight</a>
           <a class="nav-item nav-link" href="/add">Add parcel</a>
           <a class="nav-item nav-link" href="/update">update parcel</a>
           <a class="nav-item nav-link" href="/delete">delete parcel</a>
@@ -20,7 +22,10 @@
   </header>
     <form action="/delete" method="post" class="w-25 bg-dark mx-auto mt-3 p-3 text-white">
         Parcel ID <input type="text"  name="_id" /> </br>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <div style="display: flex; gap: 20px; margin: auto; padding-top: 20px">
+        <a href="/" class="btn btn-primary">Back</a>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
     </form>
   </body>
 </html>

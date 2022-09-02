@@ -14,6 +14,11 @@ router.get('/list', async (req, res) => {
   res.render('list', { parcels })
 })
 
+router.get('/listnonfragile', async (req, res) => {
+  const parcels = await Parcel.find({ fragile: false })
+  res.render('list', { parcels })
+})
+
 router.get('/listbysender', async (req, res) => {
   const parcels = await Parcel.find()
   res.render('listBySender', { parcels })
